@@ -1,0 +1,149 @@
+$dark-color: #0b0d17;
+$light-color: #d0d6f9;
+$white-color: #ffffff;
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  background: url("./assets/background-technology-mobile.jpg") no-repeat center
+    center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  overflow-y: scroll;
+  height: 100vh;
+  overflow-y: scroll;
+
+  text-align: center;
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .heading {
+      h1 {
+        font-weight: bolder;
+        color: $white-color;
+      }
+      .reference {
+        font-size: 0.8rem;
+        color: $light-color;
+      }
+    }
+    .body {
+      img {
+        width: 100%;
+      }
+      .info {
+        .title {
+          color: $white-color;
+        }
+        .description {
+          width: 90%;
+          color: $light-color;
+          margin-right: auto;
+          margin-left: auto;
+        }
+        .like-button {
+          text-decoration: none;
+          padding: 10px 25px;
+          text-align: center;
+          //display: block;
+          margin-bottom: 60px;
+          font-size: 16px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+.loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+@media only screen and (min-width: 641px) {
+  .App {
+    background: url("./assets/background-technology-tablet.jpg") no-repeat
+      center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100vh;
+    .container {
+      width: 100%;
+      margin-right: auto;
+      margin-left: auto;
+      .body {
+        img {
+          width: 90%;
+          height: 40%;
+        }
+        .info {
+          .description {
+            width: 90%;
+            margin-right: auto;
+            margin-left: auto;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 961px) {
+  .App {
+    background: url("./assets/background-technology-desktop.jpg") no-repeat
+      center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    .container {
+      width: 100%;
+      margin-right: auto;
+      margin-left: auto;
+      .heading {
+        margin-left: -50%;
+        h1 {
+          font-size: 70px;
+        }
+        .reference {
+          font-size: 1rem;
+        }
+      }
+      .body {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        img {
+          width: 50%;
+          height: 50%;
+        }
+        .info {
+          .title {
+            font-size: 1.5rem;
+          }
+          margin-top: 5rem;
+          .description {
+            width: 80%;
+            line-height: 20px;
+          }
+          .like-button {
+            display: block;
+            margin-left: 10%;
+          }
+        }
+      }
+    }
+  }
+}
