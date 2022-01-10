@@ -32,7 +32,7 @@ function App() {
       setLiked(true);
     }
   };
-
+  const isImage = data?.url?.split(".").pop() === "jpg";
   return loading ? (
     <SpaceLoader />
   ) : (
@@ -45,7 +45,11 @@ function App() {
           </p>
         </div>
         <div className="body">
-          <img src={data.url} alt={data.title} />
+          {isImage ? (
+            <img src={data.url} alt={data.title} />
+          ) : (
+            <iframe src={data.url} title={data.title} />
+          )}
           <div className="info">
             <div className="title">
               <p>{data.title}</p>
